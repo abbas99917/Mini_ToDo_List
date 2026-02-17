@@ -3,7 +3,7 @@
     let btn = document.getElementById("addText");
     let ul = document.querySelector(".list");
 
-let items = JSON.parse(localStorage.getItem("todolist" || []));
+let items = JSON.parse(localStorage.getItem("todolist")) || [];
 
 function displaList(){
     ul.innerHTML = "";
