@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+/* Body Background */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 450px;
+    background: rgba(255,255,255,0.15);
+    backdrop-filter: blur(15px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+
+/* Heading */
+.todo-heading {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+/* ===== Input Row ===== */
+.input-row {
+    display: flex;
+    gap: 10px;
+}
+
+/* Input Field */
+#inputData {
+    flex: 1;
+    padding: 12px 15px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255,255,255,0.8);
+    transition: 0.3s;
+}
+
+#inputData:focus {
+    box-shadow: 0 0 8px rgba(255,255,255,0.8);
+}
+
+/* Add Button */
+#addText {
+    padding: 12px 20px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6a00, #ee0979);
+    color: white;
+    transition: 0.3s ease;
+}
+
+#addText:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* ===== List Styling ===== */
+.list {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.list li {
+    background: rgba(255,255,255,0.9);
+    padding: 10px 15px;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+}
+
+/* Delete Button */
+.list li button {
+    background: crimson;
+    border: none;
+    padding: 6px 10px;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 13px;
+    transition: 0.3s;
+}
+
+.list li button:hover {
+    background: darkred;
+    transform: scale(1.1);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .input-row {
+        flex-direction: column;
+    }
+
+    #addText {
+        width: 100%;
+    }
+
+    .todo-heading {
+        font-size: 20px;
+    }
+}
